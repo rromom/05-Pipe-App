@@ -1,0 +1,36 @@
+<div class="card">
+  <p-panel [toggleable]="true">
+  <ng-template pTemplate="header" >
+        <p-avatar
+            image="https://miro.medium.com/v2/resize:fit:400/1*YbWctbvd5k5tvAjPcu6YPA.png"
+            size="large"
+            shape="circle" />
+          <h1>
+            Basic Pipes
+          </h1>
+  </ng-template>
+  <p>
+    Pipes included in Angular - Usually in the Common Module
+  </p>
+  </p-panel>
+</div>
+
+
+<p-card header="uppercase">
+  <p>
+    {{ nameLower | uppercase }}
+  </p>
+</p-card>
+
+<p-card header="lowercase">
+  <p>
+    {{ nameUpper | lowercase }}
+  </p>
+</p-card>
+
+<p-card header="titlecase">
+  <p>
+    {{ nameTitle | titlecase }}
+  </p>
+</p-card>
+
