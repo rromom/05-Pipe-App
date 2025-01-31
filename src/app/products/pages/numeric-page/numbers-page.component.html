@@ -1,1 +1,43 @@
-<p>numeric-page works!</p>
+<div class="card mt-2" >
+  <p-panel [toggleable]="true">
+  <ng-template pTemplate="header" >
+        <p-avatar
+            image="https://miro.medium.com/v2/resize:fit:1400/1*6N5ItCnfNHJHFD6Ecopf1g.jpeg"
+            size="large"
+            shape="circle"
+            class="mr-2" />
+          <h1>
+            Numeric Pipes
+          </h1>
+  </ng-template>
+  <p>
+    Pipes included in Angular to work with Numbers - Usually in the Common Module
+  </p>
+  </p-panel>
+</div>
+
+
+<div class="grid mt-2">
+  <div class="col-12 md:col-6 lg:col-4 ">
+      <p-card header="Net Sales" subheader="per year">
+        <p>
+          {{ totalSells | number: '1.4-4' }}
+        </p>
+      </p-card>
+  </div>
+  <div class="col-12 md:col-6 lg:col-4 ">
+    <p-card header="Gross Sales" subheader="per year">
+      <p>
+        {{ totalSells | currency: '' : 'symbol-narrow' : '1.4-4' }}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6 lg:col-4 ">
+    <p-card header="percentage profit" subheader="per year">
+      <p>
+        {{ percentFormat | percent: '1.2-2' }}
+      </p>
+    </p-card>
+  </div>
+
+  </div>
